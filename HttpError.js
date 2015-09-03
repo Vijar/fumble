@@ -22,6 +22,8 @@ function HttpError (status, message, options) {
     if (options.debug) {
         this.debug = options.debug;
     }
+    
+    this.stack = (new Error()).stack;
 }
 
 // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#Example.3A_Custom_Error_Types
